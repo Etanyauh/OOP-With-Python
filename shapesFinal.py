@@ -168,3 +168,19 @@ def choose_shape(id):
         print("Please choose a valid number")
         print("*************")
         return shape_menu()
+
+def shape_menu():
+    print("Select A Shape")
+    print("1) Square")
+    print("2) Rectangle")
+    print("3) Diamond")
+    print("4) Triangle")
+    print("5) Circle")
+
+    id = int(input("Choose a shape by selecting the number "))
+    return choose_shape(id)
+
+greeting = "Welcome to Shapes - Area and Perimeter Calculator"
+print(greeting)
+print(shape_menu())
+text = input()
