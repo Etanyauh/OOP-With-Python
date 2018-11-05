@@ -5,13 +5,15 @@ class Shapes:
         self.length_of_sides = length_of_sides
 
     def area(self):
+        print("The area is")
         return self.length_of_sides * self.length_of_sides
 
     def perimeter(self):
+        print("The perimeter is")
         return 4*self.length_of_sides
 
-    def num_of_sides(self):
-        return 4
+    # def num_of_sides(self):
+    #     return 4
 
 class Square(Shapes):
     pass
