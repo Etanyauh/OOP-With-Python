@@ -25,9 +25,11 @@ class Rectangle(Shapes):
         self.width = width
 
     def area(self):
+        print("The area is")
         return self.length * self.width
 
     def perimeter(self):
+        print("The perimeter is")
         return 2*self.length + 2*self.width
 
 
@@ -38,10 +40,11 @@ class Diamond(Shapes):
         self.altitude = altitude
 
     def area(self):
+        print("The area is")
         return self.length * self.altitude
 
     def perimeter(self):
-
+        print("The perimeter is")
         return 4*self.length
 
 class Triangle(Shapes):
@@ -54,13 +57,12 @@ class Triangle(Shapes):
         self.height = height
 
     def area(self):
+        print("The area is")
         return (self.side_b*self.height)/2
 
     def perimeter(self):
-
+        print("The perimeter is")
         return self.side_a + self.side_b + self.side_c
-
-
 
 import math
 
@@ -70,9 +72,11 @@ class Circle(Shapes):
         self.r = r
 
     def area(self):
+        print("The area is")
         return self.pi*(math.pow(self.r, 2))
 
     def perimeter(self):
+        print("The circumference using pi = 3.14159 is")
         return 2*self.pi*self.r
 
 x = Circle(3.1415, 5)
