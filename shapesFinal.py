@@ -79,8 +79,92 @@ class Circle(Shapes):
         print("The circumference using pi = 3.14159 is")
         return 2*self.pi*self.r
 
-x = Circle(3.1415, 5)
+def choose_shape(id):
 
-
-
-print(x.perimeter())
+    if id == 1:
+        print("Enter sides")
+        sides = int(input())
+        # if sides
+        #     print("Numbers only")
+        x = Square(sides)
+        print(x.perimeter())
+        print(x.area())
+        print("Continue? Y/N")
+        answer = input()
+        if answer == "Y":
+            print("*************")
+            return shape_menu()
+        elif answer == "N":
+            print("Ok Bye!")
+            return quit()
+    elif id == 2:
+        print("Enter a length")
+        length = int(input())
+        print("Enter a width")
+        width = int(input())
+        x = Rectangle(length, width)
+        print(x.perimeter())
+        print(x.area())
+        print("Continue? Y/N")
+        answer = input()
+        if answer == "Y":
+            print("*************")
+            return shape_menu()
+        elif answer == "N":
+            print("Ok Bye!")
+            return quit()
+    elif id == 3:
+        print("Enter length")
+        length = int(input())
+        print("Enter altitude")
+        altitude = int(input())
+        x = Diamond(length, altitude)
+        print(x.perimeter())
+        print(x.area())
+        print("Continue? Y/N")
+        answer = input()
+        if answer == "Y":
+            print("*************")
+            return shape_menu()
+        elif answer == "N":
+            print("Ok Bye!")
+            return quit()
+    elif id == 4:
+        print("Enter height")
+        height = int(input())
+        print("I need 3 sides. Enter the base first")
+        side_b = int(input())
+        print("Now enter the other side")
+        side_a = int(input())
+        print("Finally enter the last side")
+        side_c = int(input())
+        x = Triangle(height, side_a, side_b, side_c)
+        print(x.perimeter())
+        print(x.area())
+        print("Continue? Y/N")
+        answer = input()
+        if answer == "Y":
+            print("*************")
+            return shape_menu()
+        elif answer == "N":
+            print("Ok Bye!")
+            return quit()
+    elif id == 5:
+        print("Enter a radius")
+        r = int(input())
+        pi = 3.14159
+        x = Circle(pi, r)
+        print(x.perimeter())
+        print(x.area())
+        print("Continue? Y/N")
+        answer = input()
+        if answer == "Y":
+            print("*************")
+            return shape_menu()
+        elif answer == "N":
+            print("Ok Bye!")
+            return quit()
+    else:
+        print("Please choose a valid number")
+        print("*************")
+        return shape_menu()
