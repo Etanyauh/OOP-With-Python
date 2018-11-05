@@ -1,3 +1,6 @@
+import string
+ascii_letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
 class Shapes:
 
     def __init__(self, length_of_sides):
@@ -80,12 +83,11 @@ class Circle(Shapes):
         return 2*self.pi*self.r
 
 def choose_shape(id):
-
-    if id == 1:
+    
+    if id == "1":
+        id == int(id)
         print("Enter sides")
         sides = int(input())
-        # if sides
-        #     print("Numbers only")
         x = Square(sides)
         print(x.perimeter())
         print(x.area())
@@ -97,7 +99,8 @@ def choose_shape(id):
         elif answer == "N":
             print("Ok Bye!")
             return quit()
-    elif id == 2:
+    elif id == "2":
+        id == int(id)
         print("Enter a length")
         length = int(input())
         print("Enter a width")
@@ -113,7 +116,8 @@ def choose_shape(id):
         elif answer == "N":
             print("Ok Bye!")
             return quit()
-    elif id == 3:
+    elif id == "3":
+        id == int(id)
         print("Enter length")
         length = int(input())
         print("Enter altitude")
@@ -129,7 +133,8 @@ def choose_shape(id):
         elif answer == "N":
             print("Ok Bye!")
             return quit()
-    elif id == 4:
+    elif id == "4":
+        id == int(id)
         print("Enter height")
         height = int(input())
         print("I need 3 sides. Enter the base first")
@@ -149,7 +154,8 @@ def choose_shape(id):
         elif answer == "N":
             print("Ok Bye!")
             return quit()
-    elif id == 5:
+    elif id == "5":
+        id == int(id)
         print("Enter a radius")
         r = int(input())
         pi = 3.14159
@@ -177,7 +183,8 @@ def shape_menu():
     print("4) Triangle")
     print("5) Circle")
 
-    id = int(input("Choose a shape by selecting the number "))
+    id = input("Choose a shape by selecting the number ")
+    
     return choose_shape(id)
 
 greeting = "Welcome to Shapes - Area and Perimeter Calculator"
